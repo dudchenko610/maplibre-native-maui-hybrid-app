@@ -1,0 +1,155 @@
+<metadata>
+    <!--
+    This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+    
+    This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+    -->
+
+    <!-- namespace -->
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']" name="managedName">Mapbox.Mapboxsdk.Annotations</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk']" name="managedName">Mapbox.Mapboxsdk</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.camera']" name="managedName">Mapbox.Mapboxsdk.Camera</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.constants']" name="managedName">Mapbox.Mapboxsdk.Constants</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.exceptions']" name="managedName">Mapbox.Mapboxsdk.Exceptions</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.geometry']" name="managedName">Mapbox.Mapboxsdk.Geometry</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.http']" name="managedName">Mapbox.Mapboxsdk.Http</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location']" name="managedName">Mapbox.Mapboxsdk.Location</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.log']" name="managedName">Mapbox.Mapboxsdk.Log</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps']" name="managedName">Mapbox.Mapboxsdk.Maps</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps.renderer.egl']" name="managedName">Mapbox.Mapboxsdk.Maps.Renderer.Egl</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.attribution']" name="managedName">Mapbox.Mapboxsdk.Attribution</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.camera']" name="managedName">Mapbox.Mapboxsdk.Camera</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location.modes']" name="managedName">Mapbox.Mapboxsdk.Location.Modes</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps.renderer.glsurfaceview']" name="managedName">Mapbox.Mapboxsdk.Maps.Renderer.Glsurfaceview</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps.renderer']" name="managedName">Mapbox.Mapboxsdk.Maps.Renderer</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps.renderer.textureview']" name="managedName">Mapbox.Mapboxsdk.Maps.Renderer.Textureview</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.maps.widgets']" name="managedName">Mapbox.Mapboxsdk.Maps.Widgets</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.module.loader']" name="managedName">Mapbox.Mapboxsdk.Module.Loader</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.module.telemetry']" name="managedName">Mapbox.Mapboxsdk.Module.Telemetry</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.module.http']" name="managedName">Mapbox.Mapboxsdk.Module.Http</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.net']" name="managedName">Mapbox.Mapboxsdk.Net</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.offline']" name="managedName">Mapbox.Mapboxsdk.Offline</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.snapshotter']" name="managedName">Mapbox.Mapboxsdk.Snapshotter</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.storage']" name="managedName">Mapbox.Mapboxsdk.Storage</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.expressions']" name="managedName">Mapbox.Mapboxsdk.Style.Expressions</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.layers']" name="managedName">Mapbox.Mapboxsdk.Style.Layers</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.light']" name="managedName">Mapbox.Mapboxsdk.Style.Light</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']" name="managedName">Mapbox.Mapboxsdk.Style.Sources</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.types']" name="managedName">Mapbox.Mapboxsdk.Style.Types</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.text']" name="managedName">Mapbox.Mapboxsdk.Text</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.utils']" name="managedName">Mapbox.Mapboxsdk.Utils</attr>
+
+    <!-- corrections -->
+    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='BasePointCollection']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="compareTo" jni-signature="(Ljava/lang/Object;)I"
+                bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="o" type="java.lang.Object" jni-type="Ljava/lang/Object;" not-null="true">
+            </parameter>
+        </method>
+    </add-node>
+    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='Marker']">
+        <method abstract="false" deprecated="not deprecated" final="false" name="compareTo" jni-signature="(Ljava/lang/Object;)I"
+                bridge="false" native="false" return="int" jni-return="I" static="false" synchronized="false" synthetic="false" visibility="public">
+            <parameter name="o" type="java.lang.Object" jni-type="Ljava/lang/Object;" not-null="true">
+            </parameter>
+        </method>
+    </add-node>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='BaseMarkerOptions']/method[@name='getMarker' and count(parameter)=0]" name="abstract">false</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='BaseMarkerOptions']/method[@name='getMarker' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='MarkerOptions']/method[@name='getMarker' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='BaseMarkerOptions']/method[@name='getThis' and count(parameter)=0]" name="abstract">false</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='BaseMarkerOptions']/method[@name='getThis' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='MarkerOptions']/method[@name='getThis' and count(parameter)=0]" name="managedReturn">Java.Lang.Object</attr>
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.annotations']/class[@name='PolygonOptions']/method[@name='addHole' and count(parameter)=1 and parameter[1][@type='java.util.List&lt;com.mapbox.mapboxsdk.geometry.LatLng&gt;...']]" />
+
+    <!-- Error CS0534: 'FileUtils.CheckFileReadPermissionTask' does not implement inherited abstract member 'AsyncTask.DoInBackground(params Object[])'  -->
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.utils']/class[@name='FileUtils.CheckFileReadPermissionTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.io.File...']]"/>
+
+    <!-- Error CS0534: 'FileUtils.CheckFileWritePermissionTask' does not implement inherited abstract member 'AsyncTask.DoInBackground(params Object[])'  -->
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.utils']/class[@name='FileUtils.CheckFileWritePermissionTask']/method[@name='doInBackground' and count(parameter)=1 and parameter[1][@type='java.io.File...']]"/>
+
+    
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.offline']/class[@name='OfflineManager']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.offline']/class[@name='OfflineManager']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.offline']/class[@name='OfflineRegion']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.offline']/class[@name='OfflineRegion']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+    
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='ImageSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='ImageSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='VectorSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='VectorSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+    
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='UnknownSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='UnknownSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='RasterSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='RasterSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='RasterDemSource']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='RasterDemSource']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+    
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.snapshotter']/class[@name='MapSnapshot']/method[@name='finalize' and count(parameter)=0]" name="managedName">InternalFinalize</attr>
+    <attr path="/api/package[@name='com.mapbox.mapboxsdk.snapshotter']/class[@name='MapSnapshot']/method[@name='finalize' and count(parameter)=0]" name="visibility">internal</attr>
+    
+<!--    <attr path="" name="managedOverride">false</attr>-->
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='entrySet' and count(parameter)=0]" />
+
+    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']">
+        <method name="entrySet" return="Java.Util.ICollection" jni-return="Ljava/util/Set;" managedReturn="System.Collections.ICollection" >
+            <parameter name="p0" type="Java.Util.ILocationEngineCallback" jni-type="Lcom/mapbox/mapboxsdk/location/engine/LocationEngineCallback;" />
+            <parameter name="p1" type="Android.Locations.ILocationListener" jni-type="Landroid/location/LocationListener;" />
+            <parameter name="p2" type="Android.OS.Looper" jni-type="Landroid/os/Looper;" />
+        </method>
+    </add-node>
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='keySet' and count(parameter)=0]" />
+
+<!--    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']">-->
+<!--        <method name="keySet" return="Java.Util.ICollection" jni-return="Ljava/util/Set;" managedReturn="System.Collections.ICollection" />-->
+<!--    </add-node>-->
+
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='entrySet' and count(parameter)=0]" />
+
+    <!-- Add the correct EntrySet method in CustomGeometrySourceOptions -->
+<!--    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']">-->
+<!--        <method name="entrySet" return="Java.Util.ICollection" jni-return="Ljava/util/Set;" managedReturn="System.Collections.ICollection" />-->
+<!--    </add-node>-->
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='keySet' and count(parameter)=0]" />
+
+    <!-- Add the correct KeySet method in CustomGeometrySourceOptions -->
+<!--    <add-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']">-->
+<!--        <method name="keySet" return="Java.Util.ICollection" jni-return="Ljava/util/Set;" managedReturn="System.Collections.ICollection" />-->
+<!--    </add-node>-->
+    
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='entrySet' and count(parameter)=0]" name="managedReturn">System.Collections.ICollection</attr>-->
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='keySet' and count(parameter)=0]" name="managedReturn">System.Collections.ICollection</attr>-->
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='keySet' and count(parameter)=0]" name="managedReturn">System.Collections.ICollection</attr>-->
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='entrySet' and count(parameter)=0]" name="managedReturn">System.Collections.ICollection</attr>-->
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='values' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='CustomGeometrySourceOptions']/method[@name='size' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='values' and count(parameter)=0]"/>
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.style.sources']/class[@name='GeoJsonOptions']/method[@name='size' and count(parameter)=0]"/>
+
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location.engine']/class[@name='MapboxFusedLocationEngineImpl']/method[@name='createListener' and count(parameter)=1 and parameter[1][@type='com.mapbox.mapboxsdk.location.engine.LocationEngineCallback']]" name="eventName"></attr>-->
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location.engine']/class[@name='MapboxFusedLocationEngineImpl']/method[@name='createListener' and count(parameter)=1 and parameter[1][@type='com.mapbox.mapboxsdk.location.engine.LocationEngineCallback&lt;com.mapbox.mapboxsdk.location.engine.LocationEngineResult&gt;']]" name="eventName"></attr>-->
+<!--    -->
+
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location.engine']/class[@name='MapboxFusedLocationEngineImpl']/method[@name='createListener' and count(parameter)=1 and parameter[1][@type='com.mapbox.mapboxsdk.location.engine.LocationEngineCallback']]" name="managedName">CreateListenerWithCallback</attr>-->
+<!--    <attr path="/api/package[@name='com.mapbox.mapboxsdk.location.engine']/class[@name='MapboxFusedLocationEngineImpl']/field[@name='cb_createListener_Lcom_mapbox_mapboxsdk_location_engine_LocationEngineCallback_']" name="managedName">CbCreateListenerWithCallback</attr>-->
+
+    <remove-node path="/api/package[@name='com.mapbox.mapboxsdk.location.engine']/class[@name='MapboxFusedLocationEngineImpl']/method[@name='createListener' and count(parameter)=1 and parameter[1][@type='com.mapbox.mapboxsdk.location.engine.LocationEngineCallback']]" />
+</metadata>

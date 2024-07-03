@@ -1,0 +1,14 @@
+@using FarmApp.Mobile.Pages.Main.TabPanel.Tab
+
+<div class="tabs @(_show ? "show" : "")"
+     style="@($"transform: translate(0, calc({TabsHeight} + {ScreenOffsetProvider.Bottom}px + 30px))")">
+    
+    @foreach (var tabModel in _tabModels)
+    {
+        <div @key="tabModel" class="tab-wrapper">
+            <TabComponent Active="@(_selectedTab == tabModel)" 
+                          TabModel="tabModel"
+                          TabClicked="OnTabClicked"/>
+        </div>
+    }
+</div>

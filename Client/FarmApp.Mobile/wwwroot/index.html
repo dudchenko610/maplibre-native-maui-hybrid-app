@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
+    <title>FarmApp.Mobile</title>
+    <base href="/" />
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link href="css/app.css" rel="stylesheet" />
+    <link href="FarmApp.Mobile.styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="_content/BlazorComponentHeap.Components/BCH.styles.css"/>
+
+    <script src="https://api.tiles.mapbox.com/mapbox.js/plugins/turf/v3.0.11/turf.min.js"></script>
+
+    <script src="_content/FarmApp.Components/js/lottie-handler.js"></script>
+    <script src="_content/FarmApp.Components/js/lottie.min.js"></script>
+    <script src="_content/FarmApp.Components/js/maplibre-gl.js"></script>
+    <link href="_content/FarmApp.Components/css/maplibre-gl.css" rel="stylesheet" />
+    <link href="_content/FarmApp.Components/css/map-styles.css" rel="stylesheet" />
+    <link href="_content/FarmApp.Components/css/app-styles.css" rel="stylesheet" />
+    <link href="_content/FarmApp.Components/css/fonts.css" rel="stylesheet" />
+    
+    <script src="_content/FarmApp.Components/js/map-utils.js"></script>
+    <script src="_content/FarmApp.Components/js/map.js"></script>
+    <script src="_content/FarmApp.Components/js/map-modals.js"></script>
+    <script src="_content/FarmApp.Components/js/map-config.js"></script>
+    <script src="_content/FarmApp.Components/js/map-polygon-drawing.js"></script>
+    <script src="_content/FarmApp.Components/js/map-custom-steads.js"></script> 
+    <script src="_content/FarmApp.Components/js/map-property-editor.js"></script>
+    <script src="_content/FarmApp.Components/js/map-feature-pictogram.js"></script>
+    <script src="_content/FarmApp.Components/js/map-steads.js"></script>
+    <script src="_content/FarmApp.Components/js/common.js"></script>
+</head>
+
+<body>
+    <div class="status-bar-safe-area"></div>
+
+    <div id="app"></div>
+    <div id="modal" style="width: 100%; height: 100%; pointer-events: none; position:absolute; top: 0; left: 0; overflow: hidden;"></div>
+    
+    <div id="blazor-error-ui">
+        An unhandled error has occurred.
+        <a href="" class="reload">Reload</a>
+        <a class="dismiss">🗙</a>
+    </div>
+
+    <script src="_framework/blazor.webview.js" autostart="false"></script>
+    <script src="_content/BlazorComponentHeap.Components/BCH.scripts.js"></script>
+</body>
+
+</html>

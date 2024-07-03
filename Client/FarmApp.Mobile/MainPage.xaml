@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FarmApp.Mobile"
+             xmlns:maplibre="clr-namespace:MaplibreMaui;assembly=Maplibre.Maui"
+             x:Class="FarmApp.Mobile.MainPage"
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <AbsoluteLayout>
+
+        <maplibre:MaplibreView x:Name="MaplibreView" 
+                               AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                               AbsoluteLayout.LayoutFlags="All"/>
+
+        <BlazorWebView x:Name="BlazorWebView" 
+                       HostPage="wwwroot/index.html" 
+                       BackgroundColor="Transparent" 
+                       AbsoluteLayout.LayoutBounds="0,0,1,1" 
+                       AbsoluteLayout.LayoutFlags="All">
+            
+            <BlazorWebView.RootComponents>
+                
+                <RootComponent Selector="#app" 
+                               ComponentType="{x:Type local:Main}" />
+                
+            </BlazorWebView.RootComponents>
+            
+        </BlazorWebView>
+        
+        <Image Source="splash_screen_background.png"
+               Aspect="AspectFill"
+               x:Name="BackgroundImage"
+               AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
+               AbsoluteLayout.LayoutFlags="All"/>
+        
+    </AbsoluteLayout>
+
+</ContentPage>

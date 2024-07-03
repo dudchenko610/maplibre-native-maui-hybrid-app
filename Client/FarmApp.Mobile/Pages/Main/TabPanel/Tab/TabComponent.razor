@@ -1,0 +1,5 @@
+<div @onclick="() => TabClicked.InvokeAsync(TabModel)" class="tab-container">
+    <div class="tab-img-container @(Active ? "active" : string.Empty)">
+        <img src="img/tabs/@($"{TabModel.Name}{(Active ? "-active" : "")}").svg"/>
+    </div>
+</div>

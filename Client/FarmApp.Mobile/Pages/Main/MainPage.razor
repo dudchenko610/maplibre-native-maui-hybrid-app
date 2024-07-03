@@ -1,0 +1,8 @@
+@page "/"
+@using FarmApp.Mobile.Pages.Main.TabPanel
+
+<div class="main-page-container">
+    <div class="tabs-holder" style="@($"top: calc(100% - 60px - {ScreenOffsetProvider.Bottom}px - 0px)")">
+        <TabPanelComponent />
+    </div>
+</div>

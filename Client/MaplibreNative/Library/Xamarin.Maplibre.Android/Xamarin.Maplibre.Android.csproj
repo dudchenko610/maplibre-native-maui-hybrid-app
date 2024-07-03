@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+    <ItemGroup>
+      <ProjectReference Include="..\ReferenceBindings\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures.csproj" />
+      <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Geojson\Org.Maplibre.Gl.Android.Sdk.Geojson.csproj" />
+      <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Turf\Org.Maplibre.Gl.Android.Sdk.Turf.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Digifais.Xamarin.JakeWharton.Timber" Version="5.0.1" />
+        <PackageReference Include="GoogleGson" Version="2.8.6" />
+        <PackageReference Include="Square.OkHttp3" Version="3.12.3" />
+        <PackageReference Include="Square.OkIO" Version="1.15.0" />
+        <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.7.0.3" />
+        <PackageReference Include="Xamarin.AndroidX.Core" Version="1.9.0.3" />
+        <PackageReference Include="Xamarin.AndroidX.Fragment" Version="1.5.5.1" />
+        <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0.16" />
+        <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.1" />
+        <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="120.0.0" />
+    </ItemGroup>
+ 
+</Project>

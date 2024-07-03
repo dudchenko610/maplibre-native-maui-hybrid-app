@@ -1,0 +1,30 @@
+<metadata>
+    <!--
+    This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+    
+    This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+    <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+    -->
+    <!-- namespace -->
+    <attr path="/api/package[@name='com.mapbox.geojson']" name="managedName">Mapbox.Geojson</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']" name="managedName">Mapbox.Geojson.Gson</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.utils']" name="managedName">Mapbox.Geojson.Utils</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.shifter']" name="managedName">Mapbox.Geojson.Shifter</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.exception']" name="managedName">Mapbox.Geojson.Exception</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.constants']" name="managedName">Mapbox.Geojson.Constants</attr>
+
+    <!-- corrections -->
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='BoundingBoxDeserializer']/method[@name='deserialize' and count(parameter)=3 and parameter[1][@type='com.google.gson.JsonElement'] and parameter[2][@type='java.lang.reflect.Type'] and parameter[3][@type='com.google.gson.JsonDeserializationContext']]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='GeometryDeserializer']/method[@name='deserialize' and count(parameter)=3 and parameter[1][@type='com.google.gson.JsonElement'] and parameter[2][@type='java.lang.reflect.Type'] and parameter[3][@type='com.google.gson.JsonDeserializationContext']]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='PointDeserializer']/method[@name='deserialize' and count(parameter)=3 and parameter[1][@type='com.google.gson.JsonElement'] and parameter[2][@type='java.lang.reflect.Type'] and parameter[3][@type='com.google.gson.JsonDeserializationContext']]" name="managedReturn">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='BoundingBoxSerializer']/method[@name='serialize' and count(parameter)=3 and parameter[1][@type='com.mapbox.geojson.BoundingBox'] and parameter[2][@type='java.lang.reflect.Type'] and parameter[3][@type='com.google.gson.JsonSerializationContext']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='PointSerializer']/method[@name='serialize' and count(parameter)=3 and parameter[1][@type='com.mapbox.geojson.Point'] and parameter[2][@type='java.lang.reflect.Type'] and parameter[3][@type='com.google.gson.JsonSerializationContext']]/parameter[1]" name="managedType">Java.Lang.Object</attr>
+
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='BoundingBoxTypeAdapter']/method[@name='read' and count(parameter)=1 and parameter[1][@type='com.google.gson.stream.JsonReader']]" name="managedName">ReadBase</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='CoordinateTypeAdapter']/method[@name='read' and count(parameter)=1 and parameter[1][@type='com.google.gson.stream.JsonReader']]" name="managedName">ReadBase</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson.gson']/class[@name='GeometryTypeAdapter']/method[@name='read' and count(parameter)=1 and parameter[1][@type='com.google.gson.stream.JsonReader']]" name="managedName">ReadBase</attr>
+    <attr path="/api/package[@name='com.mapbox.geojson']/class[@name='PointAsCoordinatesTypeAdapter']/method[@name='read' and count(parameter)=1 and parameter[1][@type='com.google.gson.stream.JsonReader']]" name="managedName">ReadBase</attr>
+
+    <remove-node path="/api/package[@name='com.mapbox.geojson']/interface[@name='CoordinateContainer']/method[@name='coordinates' and count(parameter)=0]" />
+</metadata>

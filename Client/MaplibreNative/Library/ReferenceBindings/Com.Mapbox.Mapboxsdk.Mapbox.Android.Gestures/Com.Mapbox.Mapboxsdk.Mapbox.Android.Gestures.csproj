@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net8.0-android</TargetFramework>
+        <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+    </PropertyGroup>
+    
+    <ItemGroup>
+      <PackageReference Include="Xamarin.AndroidX.Annotation" Version="1.2.0.3" />
+      <PackageReference Include="Xamarin.AndroidX.Core" Version="1.6.0" />
+    </ItemGroup>
+</Project>

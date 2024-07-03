@@ -1,0 +1,80 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.0000.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmApp.Shared", "FarmApp.Shared\FarmApp.Shared.csproj", "{94BBE90F-5323-431C-A5F1-D636FCA6E02C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Client", "Client", "{CB3A8810-9E19-4168-B5EA-5B45923158F1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FarmApp.Mobile", "Client\FarmApp.Mobile\FarmApp.Mobile.csproj", "{547601C1-524A-459E-9E4A-C9AC14007AA6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MaplibreNative", "MaplibreNative", "{22AB839C-FB23-463E-A2F6-36552E519830}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Library", "Library", "{8D858B1B-B801-496E-8294-B03F9F34E2B6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ReferenceBindings", "ReferenceBindings", "{4D62B560-C961-44E7-81FB-6C864CB85173}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures", "Client\MaplibreNative\Library\ReferenceBindings\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures.csproj", "{01DAFC0B-D389-4AD9-BEDA-964E936005DA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Org.Maplibre.Gl.Android.Sdk.Geojson", "Client\MaplibreNative\Library\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Geojson\Org.Maplibre.Gl.Android.Sdk.Geojson.csproj", "{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Org.Maplibre.Gl.Android.Sdk.Turf", "Client\MaplibreNative\Library\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Turf\Org.Maplibre.Gl.Android.Sdk.Turf.csproj", "{45C147CC-0096-46B8-BA77-BE70F3708A4A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Maplibre.Android", "Client\MaplibreNative\Library\Xamarin.Maplibre.Android\Xamarin.Maplibre.Android.csproj", "{508B9496-E5BB-4B14-B6E9-B4C695AF096D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maplibre.Maui", "Client\MaplibreNative\Maplibre.Maui\Maplibre.Maui.csproj", "{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{94BBE90F-5323-431C-A5F1-D636FCA6E02C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94BBE90F-5323-431C-A5F1-D636FCA6E02C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94BBE90F-5323-431C-A5F1-D636FCA6E02C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94BBE90F-5323-431C-A5F1-D636FCA6E02C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{547601C1-524A-459E-9E4A-C9AC14007AA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{547601C1-524A-459E-9E4A-C9AC14007AA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{547601C1-524A-459E-9E4A-C9AC14007AA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{547601C1-524A-459E-9E4A-C9AC14007AA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{01DAFC0B-D389-4AD9-BEDA-964E936005DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01DAFC0B-D389-4AD9-BEDA-964E936005DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01DAFC0B-D389-4AD9-BEDA-964E936005DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01DAFC0B-D389-4AD9-BEDA-964E936005DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{45C147CC-0096-46B8-BA77-BE70F3708A4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{45C147CC-0096-46B8-BA77-BE70F3708A4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{45C147CC-0096-46B8-BA77-BE70F3708A4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{45C147CC-0096-46B8-BA77-BE70F3708A4A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{508B9496-E5BB-4B14-B6E9-B4C695AF096D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{508B9496-E5BB-4B14-B6E9-B4C695AF096D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{508B9496-E5BB-4B14-B6E9-B4C695AF096D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{508B9496-E5BB-4B14-B6E9-B4C695AF096D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{547601C1-524A-459E-9E4A-C9AC14007AA6} = {CB3A8810-9E19-4168-B5EA-5B45923158F1}
+		{22AB839C-FB23-463E-A2F6-36552E519830} = {CB3A8810-9E19-4168-B5EA-5B45923158F1}
+		{8D858B1B-B801-496E-8294-B03F9F34E2B6} = {22AB839C-FB23-463E-A2F6-36552E519830}
+		{4D62B560-C961-44E7-81FB-6C864CB85173} = {8D858B1B-B801-496E-8294-B03F9F34E2B6}
+		{01DAFC0B-D389-4AD9-BEDA-964E936005DA} = {4D62B560-C961-44E7-81FB-6C864CB85173}
+		{D3C0413B-3CD2-446C-BCF7-313C5EADD1BA} = {4D62B560-C961-44E7-81FB-6C864CB85173}
+		{45C147CC-0096-46B8-BA77-BE70F3708A4A} = {4D62B560-C961-44E7-81FB-6C864CB85173}
+		{508B9496-E5BB-4B14-B6E9-B4C695AF096D} = {8D858B1B-B801-496E-8294-B03F9F34E2B6}
+		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2} = {22AB839C-FB23-463E-A2F6-36552E519830}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {3E1D72AB-FE6F-48C5-AD98-147A6E3691EA}
+	EndGlobalSection
+EndGlobal
