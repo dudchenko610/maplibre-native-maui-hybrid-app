@@ -4,36 +4,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:FarmApp.Mobile"
              xmlns:maplibre="clr-namespace:MaplibreMaui;assembly=Maplibre.Maui"
+             xmlns:controls="clr-namespace:FarmApp.Mobile.Controls"
              x:Class="FarmApp.Mobile.MainPage"
              BackgroundColor="{DynamicResource PageBackgroundColor}">
 
-    <AbsoluteLayout>
+    
+    <controls:HitRoutingAbsoluteLayout x:Name="RootLayout">
 
         <maplibre:MaplibreView x:Name="MaplibreView" 
+                               StyleUrl="https://tile.openstreetmap.org.ua/styles/osm-bright/style.json"
+                               StartLatitude="49.985983"
+                               StartLongitude="36.233640"
+                               StartZoom="10"
                                AbsoluteLayout.LayoutBounds="0,0,1,1" 
                                AbsoluteLayout.LayoutFlags="All"/>
 
-        <BlazorWebView x:Name="BlazorWebView" 
-                       HostPage="wwwroot/index.html" 
-                       BackgroundColor="Transparent" 
-                       AbsoluteLayout.LayoutBounds="0,0,1,1" 
-                       AbsoluteLayout.LayoutFlags="All">
-            
+        <controls:CustomBlazorWebView x:Name="BlazorWebView"
+                                      HostPage="wwwroot/index.html"
+                                      BackgroundColor="Transparent"
+                                      AbsoluteLayout.LayoutBounds="0,0,1,1"
+                                      AbsoluteLayout.LayoutFlags="All">
+        
             <BlazorWebView.RootComponents>
-                
-                <RootComponent Selector="#app" 
+        
+                <RootComponent Selector="#app"
                                ComponentType="{x:Type local:Main}" />
-                
+        
             </BlazorWebView.RootComponents>
-            
-        </BlazorWebView>
+        
+        </controls:CustomBlazorWebView>
         
         <Image Source="splash_screen_background.png"
                Aspect="AspectFill"
                x:Name="BackgroundImage"
+               IsVisible="False"
                AbsoluteLayout.LayoutBounds="0, 0, 1, 1"
                AbsoluteLayout.LayoutFlags="All"/>
         
-    </AbsoluteLayout>
+    </controls:HitRoutingAbsoluteLayout>
 
 </ContentPage>

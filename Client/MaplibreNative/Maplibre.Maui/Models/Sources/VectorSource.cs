@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace MaplibreMaui.Models.Sources;
 
 public class VectorSource : Source

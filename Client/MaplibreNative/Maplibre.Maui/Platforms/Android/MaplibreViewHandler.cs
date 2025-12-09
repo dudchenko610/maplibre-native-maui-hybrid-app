@@ -11,13 +11,17 @@ public partial class MaplibreViewHandler
     protected override PlatformView CreatePlatformView()
     {
         var mainActivity = (MauiAppCompatActivity?) Context.GetActivity();
-
-        var fragmentContainerView = new PlatformView(Context)
-        {
-            Id = Android.Views.View.GenerateViewId(),
-        };
+        var fragmentContainerView = new PlatformView(Context) { Id = Android.Views.View.GenerateViewId() };
         
-        _maplibreFragment = new MaplibreFragment((AndroidMaplibreMapService) MapService, CallbackService);
+        var maplibreView = VirtualView as MaplibreView;
+        
+        var styleUrl = maplibreView.StyleUrl;
+        var lat = maplibreView.StartLatitude;
+        var lng = maplibreView.StartLongitude;
+        var zoom = maplibreView.StartZoom;
+        
+        _maplibreFragment = new MaplibreFragment((AndroidMaplibreMapService) MapService, CallbackService,
+            styleUrl, lat, lng, zoom);
 
         var fragmentTransaction = mainActivity.SupportFragmentManager.BeginTransaction();
         fragmentTransaction.Replace(fragmentContainerView.Id, _maplibreFragment, $"mapbox-maui-{fragmentContainerView.Id}");
@@ -28,12 +32,6 @@ public partial class MaplibreViewHandler
     protected override void ConnectHandler(PlatformView platformView)
     {
         base.ConnectHandler(platformView);
-
-        if (VirtualView is MaplibreView mapboxView)
-        {
-            // mapboxView.AnnotationController = this;
-            // mapboxView.QueryManager = this;
-        }
     }
 
     protected override void DisconnectHandler(PlatformView platformView)

@@ -1,3 +1,5 @@
+using Microsoft.Maui.Hosting;
+
 namespace MaplibreMaui;
 
 public static class MauiAppBuilderExtensions

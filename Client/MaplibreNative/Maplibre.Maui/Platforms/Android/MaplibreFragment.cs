@@ -14,10 +14,25 @@ public partial class MaplibreFragment : Fragment
     private readonly AndroidMaplibreMapService _mapService;
     private readonly MaplibreCallbackService _callbackService;
 
-    public MaplibreFragment(AndroidMaplibreMapService mapService, MaplibreCallbackService callbackService)
+    private readonly string _styleUrl;
+    private readonly float _startLatitude;
+    private readonly float _startLongitude;
+    private readonly float _startZoom;
+
+    public MaplibreFragment(AndroidMaplibreMapService mapService, 
+        MaplibreCallbackService callbackService,
+        string styleUrl,
+        float startLatitude,
+        float startLongitude,
+        float startZoom)
     {
         _mapService = mapService;
         _callbackService = callbackService;
+        
+        _styleUrl = styleUrl;
+        _startLatitude = startLatitude;
+        _startLongitude = startLongitude;
+        _startZoom = startZoom;
     }
 
     public override View OnCreateView(LayoutInflater inflater, ViewGroup? container, Bundle? savedInstanceState)

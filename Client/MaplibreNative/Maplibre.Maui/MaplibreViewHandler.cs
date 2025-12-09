@@ -1,4 +1,5 @@
 using MaplibreMaui.Services;
+using Microsoft.Maui;
 using Microsoft.Maui.Handlers;
 
 #if IOS 
@@ -35,9 +36,9 @@ public partial class MaplibreViewHandler : ViewHandler<MaplibreView, PlatformVie
 #if ANDROID
         MapService = new AndroidMaplibreMapService();
 #elif IOS
-        return null!;
+        MapService = new iOSMaplibreMapService();
 #else
-        return null!;
+        
 #endif
     }
 }

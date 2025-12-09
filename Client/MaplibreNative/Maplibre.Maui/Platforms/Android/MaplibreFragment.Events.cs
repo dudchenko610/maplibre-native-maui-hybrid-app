@@ -16,7 +16,10 @@ public partial class MaplibreFragment : IOnMapReadyCallback, MapboxMap.IOnMoveLi
         // map.AddOnMoveListener(this);
         // map.AddOnCameraIdleListener(this);
         
-        _callbackService.InvokeMapReady();
+        _mapService.SetStyle(_startLatitude, _startLongitude, _startZoom, _styleUrl);
+        _mapService.ToggleQuickZoomActions(false);
+        _mapService.ToggleCompass(false);
+        _mapService.ToggleDebugMode(false);
     }
 
     public void OnStyleLoaded(Style style)

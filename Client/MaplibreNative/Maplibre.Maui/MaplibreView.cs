@@ -1,4 +1,5 @@
 using MaplibreMaui.Services;
+using Microsoft.Maui.Controls;
 
 namespace MaplibreMaui;
 
@@ -10,5 +11,11 @@ public partial class MaplibreView : View
 
     public MaplibreCallbackService CallbackService => Handler is MaplibreViewHandler maplibreViewHandler
         ? maplibreViewHandler.CallbackService
-        : new MaplibreCallbackService();
+        : null!;
+    
+    protected override void OnHandlerChanged()
+    {
+        base.OnHandlerChanged();
+        if (Handler != null) HandlerChanged.Invoke();
+    }
 }

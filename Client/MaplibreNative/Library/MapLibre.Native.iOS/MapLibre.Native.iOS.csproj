@@ -1,0 +1,41 @@
+<Project Sdk="Microsoft.NET.Sdk">
+    <PropertyGroup>
+        <TargetFramework>net9.0-ios</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>true</ImplicitUsings>
+
+        <!-- This tells the SDK it's a binding project -->
+        <IsBindingProject>true</IsBindingProject>
+
+        <!-- I’d turn this off for now to avoid surprises while binding -->
+        <IsTrimmable>false</IsTrimmable>
+        <RootNamespace>MapLibre.Native.iOS</RootNamespace>
+    </PropertyGroup>
+
+    <!-- MapLibre XCFramework reference (root) to support both device and simulator slices -->
+    <ItemGroup>
+        <NativeReference Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'"
+                         Include="..\MapLibre.xcframework\ios-arm64_x86_64-simulator\MapLibre.framework">
+            <Kind>Framework</Kind>
+            <SmartLink>True</SmartLink>
+            <ForceLoad>True</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+            <Frameworks>CoreGraphics CoreLocation QuartzCore UIKit Metal</Frameworks>
+        </NativeReference>
+
+        <NativeReference Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'"
+                         Include="..\MapLibre.xcframework\ios-arm64\MapLibre.framework">
+            <Kind>Framework</Kind>
+            <SmartLink>True</SmartLink>
+            <ForceLoad>True</ForceLoad>
+            <LinkerFlags>-ObjC</LinkerFlags>
+            <Frameworks>CoreGraphics CoreLocation QuartzCore UIKit Metal</Frameworks>
+        </NativeReference>
+    </ItemGroup>
+
+    <!-- Binding source files -->
+    <ItemGroup>
+        <ObjcBindingApiDefinition Include="ApiDefinition.cs"/>
+        <ObjcBindingCoreSource Include="StructsAndEnums.cs"/>
+    </ItemGroup>
+</Project>

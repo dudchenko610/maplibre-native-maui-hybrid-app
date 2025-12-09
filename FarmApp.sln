@@ -25,6 +25,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Xamarin.Maplibre.Android", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Maplibre.Maui", "Client\MaplibreNative\Maplibre.Maui\Maplibre.Maui.csproj", "{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "MapLibre.xcframework", "MapLibre.xcframework", "{84836EBF-C496-4490-9883-9B9F2F36C6CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLibre.Native.iOS", "Client\MaplibreNative\Library\MapLibre.Native.iOS\MapLibre.Native.iOS.csproj", "{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +63,10 @@ Global
 		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -73,6 +81,8 @@ Global
 		{45C147CC-0096-46B8-BA77-BE70F3708A4A} = {4D62B560-C961-44E7-81FB-6C864CB85173}
 		{508B9496-E5BB-4B14-B6E9-B4C695AF096D} = {8D858B1B-B801-496E-8294-B03F9F34E2B6}
 		{B1DFDE57-AD9E-42D4-98FF-E2893CA31ED2} = {22AB839C-FB23-463E-A2F6-36552E519830}
+		{84836EBF-C496-4490-9883-9B9F2F36C6CF} = {8D858B1B-B801-496E-8294-B03F9F34E2B6}
+		{ACDF4080-C257-4AB7-ADD8-CD074FA9BA56} = {8D858B1B-B801-496E-8294-B03F9F34E2B6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {3E1D72AB-FE6F-48C5-AD98-147A6E3691EA}

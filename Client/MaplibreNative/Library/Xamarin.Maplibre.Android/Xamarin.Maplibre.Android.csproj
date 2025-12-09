@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
     <PropertyGroup>
-        <TargetFramework>net8.0-android</TargetFramework>
+        <TargetFramework>net9.0-android</TargetFramework>
         <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
         <Nullable>enable</Nullable>
         <ImplicitUsings>enable</ImplicitUsings>
     </PropertyGroup>
     <ItemGroup>
-      <ProjectReference Include="..\ReferenceBindings\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures.csproj" />
-      <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Geojson\Org.Maplibre.Gl.Android.Sdk.Geojson.csproj" />
-      <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Turf\Org.Maplibre.Gl.Android.Sdk.Turf.csproj" />
+        <ProjectReference Include="..\ReferenceBindings\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures\Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures.csproj" />
+        <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Geojson\Org.Maplibre.Gl.Android.Sdk.Geojson.csproj" />
+        <ProjectReference Include="..\ReferenceBindings\Org.Maplibre.Gl.Android.Sdk.Turf\Org.Maplibre.Gl.Android.Sdk.Turf.csproj" />
     </ItemGroup>
 
     <ItemGroup>
@@ -23,5 +23,5 @@
         <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.6.1" />
         <PackageReference Include="Xamarin.GooglePlayServices.Location" Version="120.0.0" />
     </ItemGroup>
- 
+
 </Project>

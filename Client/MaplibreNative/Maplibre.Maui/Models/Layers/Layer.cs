@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace MaplibreMaui.Models.Layers;
 
 public class Layer
