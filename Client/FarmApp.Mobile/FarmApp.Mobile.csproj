@@ -9,14 +9,7 @@
         <ImplicitUsings>enable</ImplicitUsings>
         <EnableDefaultCssItems>false</EnableDefaultCssItems>
 
-        <!-- Display name -->
         <ApplicationTitle>Farm App</ApplicationTitle>
-
-        <!-- App Identifier -->
-        <ApplicationId>com.websvit.farmapp</ApplicationId>
-        <ApplicationIdGuid>FA1CB710-D1F6-47AF-897B-C702BE61360A</ApplicationIdGuid>
-
-        <!-- Versions -->
         <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
         <ApplicationVersion>1</ApplicationVersion>
 
@@ -29,8 +22,19 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
+    <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Debug'">
+        <AndroidPackageFormat>apk</AndroidPackageFormat>
+    </PropertyGroup>
+
+    <PropertyGroup Condition="$(TargetFramework.Contains('-android')) and '$(Configuration)' == 'Release'">
+        <ApplicationId>{app-id-goes-here}</ApplicationId>
+        <AndroidPackageFormat>aab</AndroidPackageFormat>
+        <AndroidKeyStore>True</AndroidKeyStore>
+        <AndroidCreatePackagePerAbi>True</AndroidCreatePackagePerAbi>
+    </PropertyGroup>
+
     <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Debug'">
-        <ApplicationId>com.epicsolutions.grocerysandbox</ApplicationId>
+        <ApplicationId>{app-id-goes-here}</ApplicationId>
         <EnableCodeSigning>true</EnableCodeSigning>
         <CodesignRequireProvisioningProfile>true</CodesignRequireProvisioningProfile>
         <DisableCodesignVerification>true</DisableCodesignVerification>
