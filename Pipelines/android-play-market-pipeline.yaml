@@ -10,13 +10,6 @@ variables:
   dotNetVersion: 'net9.0'
   appPackageId: '{app-id-goes-here}'
   baseVersion: '1.0'
-  projects: |
-    Client/FarmApp.Mobile/FarmApp.Mobile.csproj
-    Client/Library/Xamarin.Maplibre.Android/Xamarin.Maplibre.Android.csproj
-    Client/Library/ReferenceBindings/Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures/Com.Mapbox.Mapboxsdk.Mapbox.Android.Gestures.csproj
-    Client/Library/ReferenceBindings/Org.Maplibre.Gl.Android.Sdk.Geojson/Org.Maplibre.Gl.Android.Sdk.Geojson.csproj
-    Client/Library/ReferenceBindings/Org.Maplibre.Gl.Android.Sdk.Turf/Org.Maplibre.Gl.Android.Sdk.Turf.csproj
-    FarmApp.Shared\FarmApp.Shared.csproj
     
 steps:
 
