@@ -92,17 +92,6 @@ steps:
     displayName: 'print build.ArtifactStagingDirectory'
 
   - task: PublishBuildArtifacts@1
-    displayName: 'publish iOS build artifact'
-    inputs:
-      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
-      ArtifactName: 'drop'
-      publishLocation: 'Container'
-
-  - script: |
-      find $(build.ArtifactStagingDirectory) -type f
-    displayName: 'print build.ArtifactStagingDirectory'
-
-  - task: PublishBuildArtifacts@1
     displayName: 'make $(appPackageId)-Signed.ipa downloadable'
     inputs:
       pathToPublish: $(Build.ArtifactStagingDirectory)/Client/FarmApp.Mobile/bin/Release/$(dotNetVersion)-ios/ios-arm64/publish/$(appPackageId)-Signed.ipa
