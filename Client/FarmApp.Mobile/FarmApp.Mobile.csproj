@@ -40,6 +40,13 @@
         <DisableCodesignVerification>true</DisableCodesignVerification>
     </PropertyGroup>
 
+    <PropertyGroup Condition="$(TargetFramework.Contains('-ios')) and '$(Configuration)' == 'Release'">
+        <ApplicationId>{app-id-goes-here}</ApplicationId>
+        <RuntimeIdentifier>ios-arm64</RuntimeIdentifier>
+        <ArchiveOnBuild>true</ArchiveOnBuild>
+        <MtouchLink>SdkOnly</MtouchLink>
+    </PropertyGroup>
+
     <ItemGroup>
         <MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#123f44"/>
         <MauiSplashScreen Include="Resources\Splash\splash.svg" Color="#123f44" BaseSize="215,79" />

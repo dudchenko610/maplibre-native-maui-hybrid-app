@@ -1,0 +1,120 @@
+trigger: none
+pr: none
+name: 1.0.$(Build.BuildId)
+
+pool:
+  vmImage: 'macos-latest'
+
+variables:
+  buildConfiguration: 'Release'
+  dotNetVersion: 'net9.0'
+  appPackageId: '{app-id-goes-here}'
+  baseVersion: '1.0'
+
+steps:
+
+  - task: Bash@3
+    displayName: 'select xcode version'
+    inputs:
+      targetType: 'inline'
+      script: |
+        sudo ls -a "/Applications"
+        sudo xcode-select -s "/Applications/Xcode_16.4.app"
+
+  - task: UseDotNet@2
+    displayName: 'install .net 9.0 sdk'
+    inputs:
+      packageType: 'sdk'
+      version: '9.0.x'
+
+  - task: Bash@3
+    displayName: 'install maui'
+    inputs:
+      targetType: 'inline'
+      script: |
+        dotnet workload install maui --version 9.0.202
+
+  - task: Bash@3
+    displayName: 'set app version'
+    inputs:
+      targetType: 'inline'
+      script: |
+        sed -i '' "s|<ApplicationVersion>.*</ApplicationVersion>|<ApplicationVersion>$(baseVersion).$(Build.BuildId)</ApplicationVersion>|" Client/FarmApp.Mobile/FarmApp.Mobile.csproj
+        sed -i '' "s|<ApplicationDisplayVersion>.*</ApplicationDisplayVersion>|<ApplicationDisplayVersion>$(baseVersion).$(Build.BuildId)</ApplicationDisplayVersion>|" Client/FarmApp.Mobile/FarmApp.Mobile.csproj
+
+  - task: ios-bundle-version@1
+    displayName: 'iOS bundle version'
+    inputs:
+      sourcePath: 'Client/FarmApp.Mobile/Platforms/iOS/Info.plist'
+      versionCodeOption: 'buildid'
+      versionCode: '$(Build.BuildId)'
+      versionName: '$(baseVersion).$(Build.BuildId)'
+      printFile: true
+
+  - task: InstallAppleCertificate@2
+    displayName: 'install p12'
+    inputs:
+      certSecureFile: 'ios-distribution.p12'
+      certPwd: '$(CertificatePassword)'
+      keychain: 'temp'
+
+  - task: InstallAppleProvisioningProfile@1
+    displayName: 'install mobileprovision'
+    inputs:
+      provisioningProfileLocation: 'secureFiles'
+      provProfileSecureFile: '{mobile-provisioning-file-name}.mobileprovision'
+
+  - task: Bash@3
+    displayName: 'build iOS app (signed)'
+    inputs:
+      targetType: 'inline'
+      script: |
+        sudo dotnet publish Client/FarmApp.Mobile/FarmApp.Mobile.csproj \
+          -f $(dotNetVersion)-ios \
+          -c Release \
+          /p:CodesignKey="$(CodesignKey)" \
+          /p:CodesignProvision="$(CodesignProvision)"
+
+  - script: |
+      mv Client/FarmApp.Mobile/bin/Release/$(dotNetVersion)-ios/ios-arm64/publish/*.ipa \
+         Client/FarmApp.Mobile/bin/Release/$(dotNetVersion)-ios/ios-arm64/publish/$(appPackageId)-Signed.ipa
+    displayName: 'rename .ipa'
+
+  - task: CopyFiles@2
+    displayName: 'copy iOS files'
+    inputs:
+      Contents: |
+        Client/FarmApp.Mobile/bin/Release/$(dotNetVersion)-ios/ios-arm64/publish/*.ipa
+      TargetFolder: '$(Build.ArtifactStagingDirectory)'
+
+  - script: |
+      find $(build.ArtifactStagingDirectory) -type f
+    displayName: 'print build.ArtifactStagingDirectory'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'publish iOS build artifact'
+    inputs:
+      PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+      ArtifactName: 'drop'
+      publishLocation: 'Container'
+
+  - script: |
+      find $(build.ArtifactStagingDirectory) -type f
+    displayName: 'print build.ArtifactStagingDirectory'
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'make $(appPackageId)-Signed.ipa downloadable'
+    inputs:
+      pathToPublish: $(Build.ArtifactStagingDirectory)/Client/FarmApp.Mobile/bin/Release/$(dotNetVersion)-ios/ios-arm64/publish/$(appPackageId)-Signed.ipa
+      artifactName: '$(appPackageId)-Signed.ipa'
+      publishLocation: 'Container'
+
+  - task: AppStoreRelease@1
+    displayName: 'send app to TestFlight'
+    inputs:
+      serviceEndpoint: 'apple-store-service-connection'
+      releaseTrack: 'TestFlight'
+      appIdentifier: '$(appPackageId)'
+      appType: 'iOS'
+      shouldSkipWaitingForProcessing: false
+      appSpecificId: '$(AppAppleId)'
